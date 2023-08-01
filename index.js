@@ -61,13 +61,15 @@ function checkUnswer(currentLevel) {
         }
 
     } else {
-        console.log("Bad")
-        var sound = new Audio ("./sounds/wrong.mp3")
-        sound.play()
-        $("body").addClass("game-over")
+        console.log("Bad");
+        var sound = new Audio ("./sounds/wrong.mp3");
+        sound.play();
+        $("body").addClass("game-over");
         setTimeout(function() { $("body").removeClass("game-over")}
-        ,200)
-        $("h1").text("Game Over, Press Any Key to Restart")
-        started = false
+        ,200);
+        $("h1").text("Game Over, Press Any Key to Restart");
+        started = false;
+        level=0
+        gamePattern = []
     }
 }
